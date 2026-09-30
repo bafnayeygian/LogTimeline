@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logtimeline"
+version = "1.0.0"
+description = "Merge multiple timestamped log files into a single chronological incident timeline with source tracking and parse-error reporting."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "LogTimeline contributors"}]
+
+[project.scripts]
+log-timeline = "log_timeline.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/bafnayeygian/LogTimeline"
+Issues = "https://github.com/bafnayeygian/LogTimeline/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
